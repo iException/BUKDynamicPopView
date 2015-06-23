@@ -1,0 +1,12 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'BUKDynamicPopView_Example', :exclusive => true do
+  pod "BUKDynamicPopView", :path => "../"
+end
+
+target 'BUKDynamicPopView_Tests', :exclusive => true do
+  pod "BUKDynamicPopView", :path => "../"
+
+  
+end
