@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        Dynamic Pop View using UIKit Dynamics.
                        DESC
-  s.homepage         = "https://github.com/iException/BXUIKit"
+  s.homepage         = "https://github.com/iException/BUKDynamicPopView"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "hyice" => "hy_ice719@163.com" }
