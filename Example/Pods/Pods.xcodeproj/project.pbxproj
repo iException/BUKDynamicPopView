@@ -1,0 +1,885 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0329DC6A8AC343760629F047 /* Pods-BUKDynamicPopView_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A9F4918C9FA7240F64221D /* Pods-BUKDynamicPopView_Example-dummy.m */; };
+		07F42D5231F3FC2E402D078D /* BUKUIViewAnimationBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C1FEC40EE11CC9943FE6D05 /* BUKUIViewAnimationBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F0278F972FBA9C50D0D9B87 /* BUKDynamicPopView.h in Headers */ = {isa = PBXBuildFile; fileRef = 268A86ED663865D27FCCACD6 /* BUKDynamicPopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F3E38007012794072B9FBB5 /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C042D1AF5BEEC29EB2A1AEFC /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B0907ADB8FA93182F5D7196 /* BUKGravityCollisionBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FD528859BD0727BF05FAB /* BUKGravityCollisionBehavior.m */; };
+		3F45A6270563AFA1D942D6CB /* UIView+BUKDynamicPopView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3904DAB71DF7FBE454E8E59D /* UIView+BUKDynamicPopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40F41C5D7217D1C6EB1F1619 /* BUKUIViewAnimationBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FBC106370AC70F843D23EB /* BUKUIViewAnimationBehavior.m */; };
+		50BA1647BFA266C270AA5A7F /* BUKGravityCollisionBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7FD528859BD0727BF05FAB /* BUKGravityCollisionBehavior.m */; };
+		59BC63DA94FDA5F739E83B30 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 44907515DC74813704B502F9 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-dummy.m */; };
+		5A99214F3702D84250AE0573 /* Pods-BUKDynamicPopView_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0863481254B89939FA1C2D8E /* Pods-BUKDynamicPopView_Tests-dummy.m */; };
+		5E5720E7B5B898F582FA788F /* BUKDynamicBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 75667C65E0A505C72F6BA0FA /* BUKDynamicBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		602658C6C7F7C4A4522B9E4B /* BUKXOrYMoveAnimationStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 846DCAA5E3F0FABA90564BF0 /* BUKXOrYMoveAnimationStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6623621F64AE4452F05EDDD0 /* BUKXOrYMoveAnimationStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 846DCAA5E3F0FABA90564BF0 /* BUKXOrYMoveAnimationStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FD0269F693A35E224CB46EA /* BUKXOrYMoveAnimationStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA3ED1C59A8B4066DB3B82 /* BUKXOrYMoveAnimationStyle.m */; };
+		7753B250FED083132078C1DC /* BUKDynamicPopView.h in Headers */ = {isa = PBXBuildFile; fileRef = 268A86ED663865D27FCCACD6 /* BUKDynamicPopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77F2EB3492E1BEF31697E7E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBBC957B8D8524664F9A692 /* Foundation.framework */; };
+		877A5DA16171F77B876BE6A7 /* BUKGravityCollisionBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = EB2529D5B704AF5643BC3F0A /* BUKGravityCollisionBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89C7173BCCC88854C011457A /* BUKUIViewAnimationBehavior.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FBC106370AC70F843D23EB /* BUKUIViewAnimationBehavior.m */; };
+		8E47940E5D06F568F9F32CE0 /* BUKDynamicPopViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C3FDA233E369F61AB410C3D /* BUKDynamicPopViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9129DF82BFD3E431B5E10B63 /* BUKDynamicPopViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C3FDA233E369F61AB410C3D /* BUKDynamicPopViewDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93B562761B0869E7DDC985DB /* Pods-BUKDynamicPopView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE4E1C11FF4E135297856ED /* Pods-BUKDynamicPopView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		93BC2DD03AC2632DE4FE8D0A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBBC957B8D8524664F9A692 /* Foundation.framework */; };
+		954E89801FCB3A5CA9F6FBAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBBC957B8D8524664F9A692 /* Foundation.framework */; };
+		A1C99DAAC69324268AA8D43A /* BUKDynamicAnimationStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB90D119CE19D4808CE517A /* BUKDynamicAnimationStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A21DCD294E5594B98748CDA3 /* UIView+BUKDynamicPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D60265482104F7B25AF1E9 /* UIView+BUKDynamicPopView.m */; };
+		A2C3BFF749EF9FB68BE95D7A /* BUKDynamicBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 75667C65E0A505C72F6BA0FA /* BUKDynamicBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8B7FAEF25F6BF19FA8ADD80 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBBC957B8D8524664F9A692 /* Foundation.framework */; };
+		AC14D1AA17F2413083AD0121 /* BUKGravityCollisionBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = EB2529D5B704AF5643BC3F0A /* BUKGravityCollisionBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE6645E7DD406AC15095D765 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91ECF8E5C0CDA8B8978E6FFA /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEA7C9FF78312D5025F88D07 /* BUKDynamicAnimationStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AB90D119CE19D4808CE517A /* BUKDynamicAnimationStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B14FA62E68611D0E902CFBC6 /* UIView+BUKDynamicPopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 48D60265482104F7B25AF1E9 /* UIView+BUKDynamicPopView.m */; };
+		B1595A1BAADE1C6763D027DA /* Pods-BUKDynamicPopView_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D1457CCBECF2D5963CD9B9D /* Pods-BUKDynamicPopView_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDB2C95A972975FE42E9A43F /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40E5CD2BA32562BA10BAF1A5 /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-dummy.m */; };
+		E22262312B5ECBDCD0C5D494 /* BUKXOrYMoveAnimationStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DA3ED1C59A8B4066DB3B82 /* BUKXOrYMoveAnimationStyle.m */; };
+		E51E58C324B9777A9DB87DBF /* UIView+BUKDynamicPopView.h in Headers */ = {isa = PBXBuildFile; fileRef = 3904DAB71DF7FBE454E8E59D /* UIView+BUKDynamicPopView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F932877F861AE56307B485DC /* BUKUIViewAnimationBehavior.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C1FEC40EE11CC9943FE6D05 /* BUKUIViewAnimationBehavior.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		083062E5E559B07E5E254E6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9C72F40301FA6BBCC5B7D52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E542C230167AF13DB67F4DE1;
+			remoteInfo = "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView";
+		};
+		70F9AA2E1C18A1A45AED0234 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9C72F40301FA6BBCC5B7D52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B0D9502BE8698BE5E35C4D3;
+			remoteInfo = "Pods-BUKDynamicPopView_Example-BUKDynamicPopView";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0863481254B89939FA1C2D8E /* Pods-BUKDynamicPopView_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BUKDynamicPopView_Tests-dummy.m"; sourceTree = "<group>"; };
+		0969CAD49F8B34A82D654207 /* Pods_BUKDynamicPopView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BUKDynamicPopView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B7FD528859BD0727BF05FAB /* BUKGravityCollisionBehavior.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BUKGravityCollisionBehavior.m; sourceTree = "<group>"; };
+		13117B58DF9285DBFB5B87FC /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKDynamicPopView_Example-BUKDynamicPopView-Private.xcconfig"; sourceTree = "<group>"; };
+		13FBC106370AC70F843D23EB /* BUKUIViewAnimationBehavior.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BUKUIViewAnimationBehavior.m; sourceTree = "<group>"; };
+		1C1FEC40EE11CC9943FE6D05 /* BUKUIViewAnimationBehavior.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BUKUIViewAnimationBehavior.h; sourceTree = "<group>"; };
+		1C26F6D3EB8AEDDEF55AB373 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		268A86ED663865D27FCCACD6 /* BUKDynamicPopView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BUKDynamicPopView.h; sourceTree = "<group>"; };
+		2BD49B8735DE65E8DFE4B91B /* Pods-BUKDynamicPopView_Tests-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKDynamicPopView_Tests-environment.h"; sourceTree = "<group>"; };
+		2F85E6DE9F762EFF61AC0B9A /* Pods-BUKDynamicPopView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKDynamicPopView_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		389C644B1D7A5604768BB18F /* Pods_BUKDynamicPopView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BUKDynamicPopView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DA3ED1C59A8B4066DB3B82 /* BUKXOrYMoveAnimationStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BUKXOrYMoveAnimationStyle.m; sourceTree = "<group>"; };
+		3904DAB71DF7FBE454E8E59D /* UIView+BUKDynamicPopView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+BUKDynamicPopView.h"; sourceTree = "<group>"; };
+		40E5CD2BA32562BA10BAF1A5 /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BUKDynamicPopView_Example-BUKDynamicPopView-dummy.m"; sourceTree = "<group>"; };
+		413952E06F879D86026752F3 /* Pods-BUKDynamicPopView_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BUKDynamicPopView_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		44907515DC74813704B502F9 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-dummy.m"; path = "../Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-dummy.m"; sourceTree = "<group>"; };
+		4684B928229915DE00D2DBFB /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKDynamicPopView_Example-BUKDynamicPopView-prefix.pch"; sourceTree = "<group>"; };
+		48D60265482104F7B25AF1E9 /* UIView+BUKDynamicPopView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+BUKDynamicPopView.m"; sourceTree = "<group>"; };
+		49F3BCC7E5A0AC034872E875 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49F5AFB1D01A77254CBADF1B /* Pods-BUKDynamicPopView_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BUKDynamicPopView_Example-resources.sh"; sourceTree = "<group>"; };
+		521AEAF2310BC850D5A5DA74 /* Pods-BUKDynamicPopView_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BUKDynamicPopView_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		54A06EA8E1DB0717CC5EC2F6 /* Pods-BUKDynamicPopView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKDynamicPopView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		5813C12D0E9A399CB7C5828E /* Pods-BUKDynamicPopView_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BUKDynamicPopView_Tests.modulemap"; sourceTree = "<group>"; };
+		5BBE8E6B05392F2C89191A19 /* Pods-BUKDynamicPopView_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BUKDynamicPopView_Tests-resources.sh"; sourceTree = "<group>"; };
+		5C44CFD19A2E0F1278CE16C1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CA2496FB5DD515E840022A7 /* BUKDynamicPopView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BUKDynamicPopView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D1457CCBECF2D5963CD9B9D /* Pods-BUKDynamicPopView_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKDynamicPopView_Example-umbrella.h"; sourceTree = "<group>"; };
+		5F2965551B9842A4E9890EFA /* Pods-BUKDynamicPopView_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BUKDynamicPopView_Example-frameworks.sh"; sourceTree = "<group>"; };
+		64CFE4A7D71DB9ACC9E2200A /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-Private.xcconfig"; path = "../Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-Private.xcconfig"; sourceTree = "<group>"; };
+		68DD1D3C3DB46D961B9D346F /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKDynamicPopView_Example-BUKDynamicPopView.xcconfig"; sourceTree = "<group>"; };
+		6E7EA2FAF1A7778D92CBA924 /* Pods-BUKDynamicPopView_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BUKDynamicPopView_Example.modulemap"; sourceTree = "<group>"; };
+		6EE4E1C11FF4E135297856ED /* Pods-BUKDynamicPopView_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKDynamicPopView_Tests-umbrella.h"; sourceTree = "<group>"; };
+		75667C65E0A505C72F6BA0FA /* BUKDynamicBehavior.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BUKDynamicBehavior.h; sourceTree = "<group>"; };
+		7AB90D119CE19D4808CE517A /* BUKDynamicAnimationStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BUKDynamicAnimationStyle.h; sourceTree = "<group>"; };
+		7C3FDA233E369F61AB410C3D /* BUKDynamicPopViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BUKDynamicPopViewDelegate.h; sourceTree = "<group>"; };
+		7CFC700AE43A9694C5D3A9E2 /* Pods-BUKDynamicPopView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKDynamicPopView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		846DCAA5E3F0FABA90564BF0 /* BUKXOrYMoveAnimationStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BUKXOrYMoveAnimationStyle.h; sourceTree = "<group>"; };
+		870886AE672CDECA9CCE3EBB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Info.plist"; sourceTree = "<group>"; };
+		8A2725F66590A082B365F885 /* Pods-BUKDynamicPopView_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BUKDynamicPopView_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8FBBC957B8D8524664F9A692 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		91ECF8E5C0CDA8B8978E6FFA /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-umbrella.h"; path = "../Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-umbrella.h"; sourceTree = "<group>"; };
+		98C792B566894E4D99EA8BF5 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView.xcconfig"; path = "../Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView.xcconfig"; sourceTree = "<group>"; };
+		A44BAD9BB3C113925C4F9199 /* Pods-BUKDynamicPopView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BUKDynamicPopView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		B12BF85BA74BB69172975F68 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2A9F4918C9FA7240F64221D /* Pods-BUKDynamicPopView_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BUKDynamicPopView_Example-dummy.m"; sourceTree = "<group>"; };
+		BA8060B504D89CDD0CF0DE67 /* Pods-BUKDynamicPopView_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BUKDynamicPopView_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C042D1AF5BEEC29EB2A1AEFC /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKDynamicPopView_Example-BUKDynamicPopView-umbrella.h"; sourceTree = "<group>"; };
+		C1A9748A83AEBC25557B2B8B /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-prefix.pch"; path = "../Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-prefix.pch"; sourceTree = "<group>"; };
+		D107729AFE8234EC65977F3F /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BUKDynamicPopView_Example-BUKDynamicPopView.modulemap"; sourceTree = "<group>"; };
+		EA66971FB640AA5A88235E54 /* BUKDynamicPopView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BUKDynamicPopView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB2529D5B704AF5643BC3F0A /* BUKGravityCollisionBehavior.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BUKGravityCollisionBehavior.h; sourceTree = "<group>"; };
+		EF980756D376CB35D9A4D488 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; name = "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView.modulemap"; path = "../Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView.modulemap"; sourceTree = "<group>"; };
+		F878254758A3D8198371A6CF /* Pods-BUKDynamicPopView_Example-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BUKDynamicPopView_Example-environment.h"; sourceTree = "<group>"; };
+		FE265D5DAF2FDE43E295DA8B /* Pods-BUKDynamicPopView_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BUKDynamicPopView_Tests-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A79D1C64C3EF4FC15FA0918 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8B7FAEF25F6BF19FA8ADD80 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83401A78C3E253194AD62B7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77F2EB3492E1BEF31697E7E9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		83818554FB300D7970E5D5F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954E89801FCB3A5CA9F6FBAF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC38318B6582147EEF983C97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BC2DD03AC2632DE4FE8D0A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14E929AAFDAA3831744AACD7 = {
+			isa = PBXGroup;
+			children = (
+				1C26F6D3EB8AEDDEF55AB373 /* Podfile */,
+				86CFF20849258F451DB9942A /* Development Pods */,
+				1B5BBA3038F500661874C208 /* Frameworks */,
+				5E0B60A652929E32EA374D0B /* Products */,
+				B55BC91AB02048700BD72B31 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		1B5BBA3038F500661874C208 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C9B37BEE070BB79A70E68E7 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2314D4BC6E1F590A1DD97D32 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B12BF85BA74BB69172975F68 /* Info.plist */,
+				870886AE672CDECA9CCE3EBB /* Info.plist */,
+				D107729AFE8234EC65977F3F /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView.modulemap */,
+				68DD1D3C3DB46D961B9D346F /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView.xcconfig */,
+				13117B58DF9285DBFB5B87FC /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-Private.xcconfig */,
+				40E5CD2BA32562BA10BAF1A5 /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-dummy.m */,
+				4684B928229915DE00D2DBFB /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-prefix.pch */,
+				C042D1AF5BEEC29EB2A1AEFC /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-umbrella.h */,
+				EF980756D376CB35D9A4D488 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView.modulemap */,
+				98C792B566894E4D99EA8BF5 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView.xcconfig */,
+				64CFE4A7D71DB9ACC9E2200A /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-Private.xcconfig */,
+				44907515DC74813704B502F9 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-dummy.m */,
+				C1A9748A83AEBC25557B2B8B /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-prefix.pch */,
+				91ECF8E5C0CDA8B8978E6FFA /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Pods-BUKDynamicPopView_Example-BUKDynamicPopView";
+			sourceTree = "<group>";
+		};
+		2523A31B2EC9889FCFE61B17 /* animationStyles */ = {
+			isa = PBXGroup;
+			children = (
+				846DCAA5E3F0FABA90564BF0 /* BUKXOrYMoveAnimationStyle.h */,
+				38DA3ED1C59A8B4066DB3B82 /* BUKXOrYMoveAnimationStyle.m */,
+			);
+			path = animationStyles;
+			sourceTree = "<group>";
+		};
+		2DB3B0F83DF85B8D51A97413 /* protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7AB90D119CE19D4808CE517A /* BUKDynamicAnimationStyle.h */,
+				75667C65E0A505C72F6BA0FA /* BUKDynamicBehavior.h */,
+				7C3FDA233E369F61AB410C3D /* BUKDynamicPopViewDelegate.h */,
+			);
+			path = protocols;
+			sourceTree = "<group>";
+		};
+		5E0B60A652929E32EA374D0B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5CA2496FB5DD515E840022A7 /* BUKDynamicPopView.framework */,
+				EA66971FB640AA5A88235E54 /* BUKDynamicPopView.framework */,
+				389C644B1D7A5604768BB18F /* Pods_BUKDynamicPopView_Example.framework */,
+				0969CAD49F8B34A82D654207 /* Pods_BUKDynamicPopView_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C9B37BEE070BB79A70E68E7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				8FBBC957B8D8524664F9A692 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7CB5B9727942B4C39AF19C10 /* dynamicBehaviors */ = {
+			isa = PBXGroup;
+			children = (
+				EB2529D5B704AF5643BC3F0A /* BUKGravityCollisionBehavior.h */,
+				0B7FD528859BD0727BF05FAB /* BUKGravityCollisionBehavior.m */,
+				1C1FEC40EE11CC9943FE6D05 /* BUKUIViewAnimationBehavior.h */,
+				13FBC106370AC70F843D23EB /* BUKUIViewAnimationBehavior.m */,
+			);
+			path = dynamicBehaviors;
+			sourceTree = "<group>";
+		};
+		7F6C24BDE4D86EC5CF1BE9FE /* Pods-BUKDynamicPopView_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5C44CFD19A2E0F1278CE16C1 /* Info.plist */,
+				5813C12D0E9A399CB7C5828E /* Pods-BUKDynamicPopView_Tests.modulemap */,
+				521AEAF2310BC850D5A5DA74 /* Pods-BUKDynamicPopView_Tests-acknowledgements.markdown */,
+				413952E06F879D86026752F3 /* Pods-BUKDynamicPopView_Tests-acknowledgements.plist */,
+				0863481254B89939FA1C2D8E /* Pods-BUKDynamicPopView_Tests-dummy.m */,
+				2BD49B8735DE65E8DFE4B91B /* Pods-BUKDynamicPopView_Tests-environment.h */,
+				FE265D5DAF2FDE43E295DA8B /* Pods-BUKDynamicPopView_Tests-frameworks.sh */,
+				5BBE8E6B05392F2C89191A19 /* Pods-BUKDynamicPopView_Tests-resources.sh */,
+				6EE4E1C11FF4E135297856ED /* Pods-BUKDynamicPopView_Tests-umbrella.h */,
+				54A06EA8E1DB0717CC5EC2F6 /* Pods-BUKDynamicPopView_Tests.debug.xcconfig */,
+				A44BAD9BB3C113925C4F9199 /* Pods-BUKDynamicPopView_Tests.release.xcconfig */,
+			);
+			name = "Pods-BUKDynamicPopView_Tests";
+			path = "Target Support Files/Pods-BUKDynamicPopView_Tests";
+			sourceTree = "<group>";
+		};
+		86CFF20849258F451DB9942A /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A70830FA90EBAFB9FFE8422 /* BUKDynamicPopView */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		9A70830FA90EBAFB9FFE8422 /* BUKDynamicPopView */ = {
+			isa = PBXGroup;
+			children = (
+				9E444819D52AADF3993CC597 /* Pod */,
+				2314D4BC6E1F590A1DD97D32 /* Support Files */,
+			);
+			name = BUKDynamicPopView;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		9E444819D52AADF3993CC597 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				268A86ED663865D27FCCACD6 /* BUKDynamicPopView.h */,
+				3904DAB71DF7FBE454E8E59D /* UIView+BUKDynamicPopView.h */,
+				48D60265482104F7B25AF1E9 /* UIView+BUKDynamicPopView.m */,
+				2523A31B2EC9889FCFE61B17 /* animationStyles */,
+				7CB5B9727942B4C39AF19C10 /* dynamicBehaviors */,
+				2DB3B0F83DF85B8D51A97413 /* protocols */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		B0A734A1C12099B2D36F52E9 /* Pods-BUKDynamicPopView_Example */ = {
+			isa = PBXGroup;
+			children = (
+				49F3BCC7E5A0AC034872E875 /* Info.plist */,
+				6E7EA2FAF1A7778D92CBA924 /* Pods-BUKDynamicPopView_Example.modulemap */,
+				8A2725F66590A082B365F885 /* Pods-BUKDynamicPopView_Example-acknowledgements.markdown */,
+				BA8060B504D89CDD0CF0DE67 /* Pods-BUKDynamicPopView_Example-acknowledgements.plist */,
+				B2A9F4918C9FA7240F64221D /* Pods-BUKDynamicPopView_Example-dummy.m */,
+				F878254758A3D8198371A6CF /* Pods-BUKDynamicPopView_Example-environment.h */,
+				5F2965551B9842A4E9890EFA /* Pods-BUKDynamicPopView_Example-frameworks.sh */,
+				49F5AFB1D01A77254CBADF1B /* Pods-BUKDynamicPopView_Example-resources.sh */,
+				5D1457CCBECF2D5963CD9B9D /* Pods-BUKDynamicPopView_Example-umbrella.h */,
+				2F85E6DE9F762EFF61AC0B9A /* Pods-BUKDynamicPopView_Example.debug.xcconfig */,
+				7CFC700AE43A9694C5D3A9E2 /* Pods-BUKDynamicPopView_Example.release.xcconfig */,
+			);
+			name = "Pods-BUKDynamicPopView_Example";
+			path = "Target Support Files/Pods-BUKDynamicPopView_Example";
+			sourceTree = "<group>";
+		};
+		B55BC91AB02048700BD72B31 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0A734A1C12099B2D36F52E9 /* Pods-BUKDynamicPopView_Example */,
+				7F6C24BDE4D86EC5CF1BE9FE /* Pods-BUKDynamicPopView_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		21FFC953F756407CFF435804 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1595A1BAADE1C6763D027DA /* Pods-BUKDynamicPopView_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7D20EC105EACF6B80152A0F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93B562761B0869E7DDC985DB /* Pods-BUKDynamicPopView_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAB41569BD177540E1246774 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1C99DAAC69324268AA8D43A /* BUKDynamicAnimationStyle.h in Headers */,
+				5E5720E7B5B898F582FA788F /* BUKDynamicBehavior.h in Headers */,
+				0F0278F972FBA9C50D0D9B87 /* BUKDynamicPopView.h in Headers */,
+				9129DF82BFD3E431B5E10B63 /* BUKDynamicPopViewDelegate.h in Headers */,
+				AC14D1AA17F2413083AD0121 /* BUKGravityCollisionBehavior.h in Headers */,
+				F932877F861AE56307B485DC /* BUKUIViewAnimationBehavior.h in Headers */,
+				6623621F64AE4452F05EDDD0 /* BUKXOrYMoveAnimationStyle.h in Headers */,
+				1F3E38007012794072B9FBB5 /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-umbrella.h in Headers */,
+				E51E58C324B9777A9DB87DBF /* UIView+BUKDynamicPopView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4A515E1044DBF5752D58EB7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEA7C9FF78312D5025F88D07 /* BUKDynamicAnimationStyle.h in Headers */,
+				A2C3BFF749EF9FB68BE95D7A /* BUKDynamicBehavior.h in Headers */,
+				7753B250FED083132078C1DC /* BUKDynamicPopView.h in Headers */,
+				8E47940E5D06F568F9F32CE0 /* BUKDynamicPopViewDelegate.h in Headers */,
+				877A5DA16171F77B876BE6A7 /* BUKGravityCollisionBehavior.h in Headers */,
+				07F42D5231F3FC2E402D078D /* BUKUIViewAnimationBehavior.h in Headers */,
+				602658C6C7F7C4A4522B9E4B /* BUKXOrYMoveAnimationStyle.h in Headers */,
+				AE6645E7DD406AC15095D765 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-umbrella.h in Headers */,
+				3F45A6270563AFA1D942D6CB /* UIView+BUKDynamicPopView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2B0D9502BE8698BE5E35C4D3 /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBB82209D1064C40B9EBC158 /* Build configuration list for PBXNativeTarget "Pods-BUKDynamicPopView_Example-BUKDynamicPopView" */;
+			buildPhases = (
+				39975C11039163B587B2D23F /* Sources */,
+				0A79D1C64C3EF4FC15FA0918 /* Frameworks */,
+				DAB41569BD177540E1246774 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BUKDynamicPopView_Example-BUKDynamicPopView";
+			productName = "Pods-BUKDynamicPopView_Example-BUKDynamicPopView";
+			productReference = 5CA2496FB5DD515E840022A7 /* BUKDynamicPopView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D15137AA26878AC211903960 /* Pods-BUKDynamicPopView_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B570E61B3407787B28D28E7 /* Build configuration list for PBXNativeTarget "Pods-BUKDynamicPopView_Tests" */;
+			buildPhases = (
+				04773CAFE4AD244DB500EDDD /* Sources */,
+				83818554FB300D7970E5D5F1 /* Frameworks */,
+				B7D20EC105EACF6B80152A0F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFA1AECAAD7C09041F87F507 /* PBXTargetDependency */,
+			);
+			name = "Pods-BUKDynamicPopView_Tests";
+			productName = "Pods-BUKDynamicPopView_Tests";
+			productReference = 0969CAD49F8B34A82D654207 /* Pods_BUKDynamicPopView_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D1F80DB6FE474A9FD8EBC9BF /* Pods-BUKDynamicPopView_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34377C266286F893B4D4150F /* Build configuration list for PBXNativeTarget "Pods-BUKDynamicPopView_Example" */;
+			buildPhases = (
+				59FEC12A8EAAFBB726E46DC9 /* Sources */,
+				83401A78C3E253194AD62B7E /* Frameworks */,
+				21FFC953F756407CFF435804 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8655F5407DDB0C8CDAB0BECD /* PBXTargetDependency */,
+			);
+			name = "Pods-BUKDynamicPopView_Example";
+			productName = "Pods-BUKDynamicPopView_Example";
+			productReference = 389C644B1D7A5604768BB18F /* Pods_BUKDynamicPopView_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E542C230167AF13DB67F4DE1 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C00961E084F448FC8C27650F /* Build configuration list for PBXNativeTarget "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView" */;
+			buildPhases = (
+				415A5122ED05A7896D13A1A9 /* Sources */,
+				AC38318B6582147EEF983C97 /* Frameworks */,
+				F4A515E1044DBF5752D58EB7 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView";
+			productName = "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView";
+			productReference = EA66971FB640AA5A88235E54 /* BUKDynamicPopView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9C72F40301FA6BBCC5B7D52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 05874A124064DD87373F8268 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 14E929AAFDAA3831744AACD7;
+			productRefGroup = 5E0B60A652929E32EA374D0B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1F80DB6FE474A9FD8EBC9BF /* Pods-BUKDynamicPopView_Example */,
+				2B0D9502BE8698BE5E35C4D3 /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView */,
+				D15137AA26878AC211903960 /* Pods-BUKDynamicPopView_Tests */,
+				E542C230167AF13DB67F4DE1 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04773CAFE4AD244DB500EDDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A99214F3702D84250AE0573 /* Pods-BUKDynamicPopView_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39975C11039163B587B2D23F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50BA1647BFA266C270AA5A7F /* BUKGravityCollisionBehavior.m in Sources */,
+				89C7173BCCC88854C011457A /* BUKUIViewAnimationBehavior.m in Sources */,
+				6FD0269F693A35E224CB46EA /* BUKXOrYMoveAnimationStyle.m in Sources */,
+				CDB2C95A972975FE42E9A43F /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-dummy.m in Sources */,
+				A21DCD294E5594B98748CDA3 /* UIView+BUKDynamicPopView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		415A5122ED05A7896D13A1A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B0907ADB8FA93182F5D7196 /* BUKGravityCollisionBehavior.m in Sources */,
+				40F41C5D7217D1C6EB1F1619 /* BUKUIViewAnimationBehavior.m in Sources */,
+				E22262312B5ECBDCD0C5D494 /* BUKXOrYMoveAnimationStyle.m in Sources */,
+				59BC63DA94FDA5F739E83B30 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-dummy.m in Sources */,
+				B14FA62E68611D0E902CFBC6 /* UIView+BUKDynamicPopView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		59FEC12A8EAAFBB726E46DC9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0329DC6A8AC343760629F047 /* Pods-BUKDynamicPopView_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8655F5407DDB0C8CDAB0BECD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BUKDynamicPopView_Example-BUKDynamicPopView";
+			target = 2B0D9502BE8698BE5E35C4D3 /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView */;
+			targetProxy = 70F9AA2E1C18A1A45AED0234 /* PBXContainerItemProxy */;
+		};
+		CFA1AECAAD7C09041F87F507 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView";
+			target = E542C230167AF13DB67F4DE1 /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView */;
+			targetProxy = 083062E5E559B07E5E254E6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1394AC584E2E2B9A9E50EAC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CFC700AE43A9694C5D3A9E2 /* Pods-BUKDynamicPopView_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKDynamicPopView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKDynamicPopView_Example/Pods-BUKDynamicPopView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BUKDynamicPopView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3FDC8D625921711031F41194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13117B58DF9285DBFB5B87FC /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKDynamicPopView_Example-BUKDynamicPopView/Pods-BUKDynamicPopView_Example-BUKDynamicPopView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKDynamicPopView_Example-BUKDynamicPopView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKDynamicPopView_Example-BUKDynamicPopView/Pods-BUKDynamicPopView_Example-BUKDynamicPopView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BUKDynamicPopView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6C3297EBADDAE03F063F16C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F85E6DE9F762EFF61AC0B9A /* Pods-BUKDynamicPopView_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKDynamicPopView_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKDynamicPopView_Example/Pods-BUKDynamicPopView_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BUKDynamicPopView_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		96B3088781E2C64B0405DC37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64CFE4A7D71DB9ACC9E2200A /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BUKDynamicPopView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A114E1E4E215937CDEC3B429 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54A06EA8E1DB0717CC5EC2F6 /* Pods-BUKDynamicPopView_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKDynamicPopView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKDynamicPopView_Tests/Pods-BUKDynamicPopView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BUKDynamicPopView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BB5EB8FB91B2467C047C1EF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13117B58DF9285DBFB5B87FC /* Pods-BUKDynamicPopView_Example-BUKDynamicPopView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKDynamicPopView_Example-BUKDynamicPopView/Pods-BUKDynamicPopView_Example-BUKDynamicPopView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKDynamicPopView_Example-BUKDynamicPopView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKDynamicPopView_Example-BUKDynamicPopView/Pods-BUKDynamicPopView_Example-BUKDynamicPopView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BUKDynamicPopView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D045DFA1D92D258D4EC21E5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D9B138B7890F92524650B08C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A44BAD9BB3C113925C4F9199 /* Pods-BUKDynamicPopView_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKDynamicPopView_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKDynamicPopView_Tests/Pods-BUKDynamicPopView_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_BUKDynamicPopView_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E1DEB3B52B927938F09EAD86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64CFE4A7D71DB9ACC9E2200A /* Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView/Pods-BUKDynamicPopView_Tests-BUKDynamicPopView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = BUKDynamicPopView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E878FBEA53A35BE26D211E4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05874A124064DD87373F8268 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E878FBEA53A35BE26D211E4B /* Debug */,
+				D045DFA1D92D258D4EC21E5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34377C266286F893B4D4150F /* Build configuration list for PBXNativeTarget "Pods-BUKDynamicPopView_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6C3297EBADDAE03F063F16C2 /* Debug */,
+				1394AC584E2E2B9A9E50EAC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B570E61B3407787B28D28E7 /* Build configuration list for PBXNativeTarget "Pods-BUKDynamicPopView_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A114E1E4E215937CDEC3B429 /* Debug */,
+				D9B138B7890F92524650B08C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C00961E084F448FC8C27650F /* Build configuration list for PBXNativeTarget "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B3088781E2C64B0405DC37 /* Debug */,
+				E1DEB3B52B927938F09EAD86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBB82209D1064C40B9EBC158 /* Build configuration list for PBXNativeTarget "Pods-BUKDynamicPopView_Example-BUKDynamicPopView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB5EB8FB91B2467C047C1EF8 /* Debug */,
+				3FDC8D625921711031F41194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9C72F40301FA6BBCC5B7D52 /* Project object */;
+}

@@ -1,0 +1,14 @@
+PODS:
+  - BUKDynamicPopView (0.1.0)
+
+DEPENDENCIES:
+  - BUKDynamicPopView (from `../`)
+
+EXTERNAL SOURCES:
+  BUKDynamicPopView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  BUKDynamicPopView: e1ec83a68b9943e89d65c63d3a136ac3d5df6dd3
+
+COCOAPODS: 0.36.3

@@ -1,0 +1,99 @@
+//
+//  UIView+BUKDynamicPopView.h
+//  Pods
+//
+//  Created by hyice on 15/6/23.
+//
+//
+
+#import <UIKit/UIKit.h>
+#import "BUKDynamicBehavior.h"
+#import "BUKDynamicAnimationStyle.h"
+#import "BUKDynamicPopViewDelegate.h"
+
+@interface UIView (BUKDynamicPopView)
+
+/**
+ *  Behavior for dynamic show animation. If behavior is nil, `BUKGravityCollisionBehavior` will be
+ *  used.
+ *
+ *  @see BUKGravityCollisionBehavior
+ */
+@property (nonatomic, strong) id<BUKDynamicBehavior> buk_dynamicShowBehavior;
+
+/**
+ *  Behavior for dynamic hide animation. If behavior is nil, `BUKUIViewAnimationBehavior` will be
+ *  used.
+ *
+ *  @see BUKUIViewAnimationBehavior
+ */
+@property (nonatomic, strong) id<BUKDynamicBehavior> buk_dynamicHideBehavior;
+
+
+
+/**
+ *  Style used to decide the position of self before show, when showing, and after hide. If style
+ *  is nil, `BUKXOrYMoveAnimationStyle` from outer top to outer bottom will be used.
+ *
+ *  @see BUKXOrYMoveAnimationStyle
+ */
+@property (nonatomic, strong) id<BUKDynamicAnimationStyle> buk_animationStyle;
+
+
+
+/**
+ *  Background inserted below self. If background is nil, a black translucent view will be used.
+ */
+@property (nonatomic, strong) UIView *buk_dynamicBackground;
+
+/**
+ *  You can tap background to dynamic hide self by default. If you don't want this feature, you
+ *  can set this property to NO to disable it.
+ */
+@property (nonatomic, assign) BOOL buk_disableBackgroundTapHide;
+
+
+
+/**
+ *  Dynamic show hide event delegate.
+ */
+@property (nonatomic, weak) id<BUKDynamicPopViewDelegate> buk_dynamicPopViewDelegate;
+
+
+
+/**
+ *  Add self to superView, and dynamic show self using `buk_dynamicShowBehavior`. Behavior will
+ *  be used to animate self's center from `[self.buk_animationStyle buk_viewCenterBeforeShow]`
+ *  to `[self.buk_animationStyle buk_viewCenterWhenShowing]`.
+ *
+ *  @see buk_dynamicShowBehavior
+ *  @see buk_animationStyle
+ */
+- (void)buk_dynamicShowInView:(UIView *)superView;
+
+/**
+ *  Insert self into superView below otherView, and then do things same as `- buk_dynamicShowInView`.
+ *
+ *  @see - (void)buk_dynamicShowInView:(UIView *)superView;
+ */
+- (void)buk_dynamicShowInView:(UIView *)superView belowView:(UIView *)otherView;
+
+/**
+ *  Insert self into superView above otherView, and then do things same as `- buk_dynamicShowInView`.
+ *
+ *  @see - (void)buk_dynamicShowInView:(UIView *)superView;
+ */
+- (void)buk_dynamicShowInView:(UIView *)superView aboveView:(UIView *)otherView;
+
+
+
+/**
+ *  Dynamic hide self useing `buk_viewCenterAfterHide`. Behavior will be used to animate self's
+ *  center from current value to `[self.buk_animationStyle buk_viewCenterAfterHide]`.
+ *
+ *  @see buk_viewCenterAfterHide
+ *  @see buk_animationStyle
+ */
+- (void)buk_dynamicHide;
+
+@end

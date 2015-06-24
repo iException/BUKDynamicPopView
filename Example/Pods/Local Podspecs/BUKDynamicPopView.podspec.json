@@ -1,0 +1,20 @@
+{
+  "name": "BUKDynamicPopView",
+  "version": "0.1.0",
+  "summary": "Dynamic Pop View using UIKit Dynamics",
+  "description": "                       Dynamic Pop View using UIKit Dynamics.\n",
+  "homepage": "https://github.com/iException/BXUIKit",
+  "license": "MIT",
+  "authors": {
+    "hyice": "hy_ice719@163.com"
+  },
+  "source": {
+    "git": "https://github.com/iException/BUKDynamicPopView.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/**/*"
+}

@@ -1,0 +1,6 @@
+framework module BUKDynamicPopView {
+  umbrella header "Pods-BUKDynamicPopView_Tests-BUKDynamicPopView-umbrella.h"
+
+  export *
+  module * { export * }
+}
