@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BUKDynamicPopView"
-  s.version          = "0.1.0"
+  s.version          = "0.0.1"
   s.summary          = "Dynamic Pop View using UIKit Dynamics"
   s.description      = <<-DESC
                        Dynamic Pop View using UIKit Dynamics.
