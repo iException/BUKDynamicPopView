@@ -14,6 +14,10 @@
 
 #import "BUKXOrYMoveAnimationStyle.h"
 
+@interface UIView ()
+@property (nonatomic, assign) BOOL buk_popViewIsAnimating;
+@end
+
 @implementation UIView (BUKDynamicPopView)
 #pragma mark - public -
 - (void)buk_dynamicShowInView:(UIView *)superView
@@ -51,14 +55,28 @@
 
 - (void)buk_dynamicHide
 {
+    if (self.buk_dynamicPopViewDelegate
+        && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewWillHide:)]) {
+        [self.buk_dynamicPopViewDelegate buk_dynamicPopViewWillHide:self];
+    }
+    self.buk_popViewIsAnimating = YES;
     CGPoint centerAfterHide = [self.buk_animationStyle buk_viewCenterAfterHide];
     [self.buk_dynamicHideBehavior buk_animateView:self toCenter:centerAfterHide complete:^{
         [self removeFromSuperview];
-        [UIView animateWithDuration:0.2f animations:^{
-            self.buk_dynamicBackground.alpha = 0;
-        } completion:^(BOOL finished) {
-            [self.buk_dynamicBackground removeFromSuperview];
-        }];
+        if (self.buk_dynamicBackground) {
+            [UIView animateWithDuration:0.2f animations:^{
+                self.buk_dynamicBackground.alpha = 0;
+            } completion:^(BOOL finished) {
+                [self.buk_dynamicBackground removeFromSuperview];
+            }];
+
+        }
+        self.buk_popViewIsAnimating = NO;
+
+        if (self.buk_dynamicPopViewDelegate
+            && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewDidHide:)]) {
+            [self.buk_dynamicPopViewDelegate buk_dynamicPopViewDidHide:self];
+        }
     }];
 }
 
@@ -86,7 +104,7 @@
     
     [self.superview insertSubview:self.buk_dynamicBackground belowSubview:self];
     
-    self.buk_dynamicBackground.alpha = 1.0f;
+    self.buk_dynamicBackground.alpha = 0.0f;
     [UIView animateWithDuration:0.2f animations:^{
         self.buk_dynamicBackground.alpha = 0.7f;
     }];
@@ -94,6 +112,11 @@
 
 - (void)buk_dynamicShowAnimation
 {
+    if (self.buk_dynamicPopViewDelegate
+        && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewWillShow:)]) {
+        [self.buk_dynamicPopViewDelegate buk_dynamicPopViewWillShow:self];
+    }
+    self.buk_popViewIsAnimating = YES;
     [self buk_insertBackground];
     
     CGPoint centerBeforeShow = [self.buk_animationStyle buk_viewCenterBeforeShow];
@@ -101,13 +124,26 @@
     
     self.center = centerBeforeShow;
     [self.buk_dynamicShowBehavior buk_animateView:self toCenter:centerWhenShowing complete:^{
-        
+        self.buk_popViewIsAnimating = NO;
+
+        if (self.buk_dynamicPopViewDelegate
+            && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewDidShow:)]) {
+            [self.buk_dynamicPopViewDelegate buk_dynamicPopViewDidShow:self];
+        }
     }];
 }
 
 #pragma mark - event -
 - (void)buk_backgroundHideTap:(UIGestureRecognizer *)gesture
 {
+    if (self.buk_popViewIsAnimating) {
+        return;
+    }
+    
+    if (self.buk_dynamicPopViewDelegate
+        && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewBackgroundTapped:)]) {
+        [self.buk_dynamicPopViewDelegate buk_dynamicPopViewBackgroundTapped:self];
+    }
     [self buk_dynamicHide];
 }
 
@@ -203,5 +239,14 @@ static void *BUKDynamicPopViewDelegate = &BUKDynamicPopViewDelegate;
     objc_setAssociatedObject(self, BUKDynamicPopViewDelegate, buk_dynamicPopViewDelegate, OBJC_ASSOCIATION_ASSIGN);
 }
 
+static void *BUKPopViewIsAnimating = &BUKPopViewIsAnimating;
+- (BOOL)buk_popViewIsAnimating
+{
+    return [objc_getAssociatedObject(self, BUKPopViewIsAnimating) boolValue];
+}
 
+- (void)setBuk_popViewIsAnimating:(BOOL)buk_popViewIsAnimating
+{
+    objc_setAssociatedObject(self, BUKPopViewIsAnimating, @(buk_popViewIsAnimating), OBJC_ASSOCIATION_ASSIGN);
+}
 @end

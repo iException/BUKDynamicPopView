@@ -7,7 +7,7 @@
 //
 
 #import "BUKViewController.h"
-#import <BUKDynamicPopView/BUKDynamicPopView.h>
+#import "BUKExamplePopView.h"
 
 @interface BUKViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -19,27 +19,54 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    if (section == 0) {
+        return 4;
+    }
+    
+    return 1;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return @"single pop view";
+    }else {
+        return @"multi pop view";
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
-    NSString *title = @"test";
+    NSString *title = @"";
 
-    switch (indexPath.row) {
-        case 0:
-            title = @"Top-->Center-->Bottom(default)";
-            break;
-        case 1:
-            title = @"Top-->Center-->Right";
-            break;
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0:
+                title = @"Drop Down Dialog(default)";
+                break;
+            case 1:
+                title = @"Drop Down Menu";
+                break;
+            case 2:
+                title = @"Pop Up Menu";
+                break;
+            case 3:
+                title = @"Right Side Menu";
+                break;
+        }
+    }else {
+        switch (indexPath.row) {
+            case 0:
+                title = @"Two Level Selection";
+                break;
+        }
     }
     
     cell.textLabel.text = title;
@@ -48,54 +75,40 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
     
-    switch (indexPath.row) {
-        case 0:
-            [self topCenterBottom];
-            break;
-            
-        case 1:
-            [self topCenterRight];
-            break;
-            
-        default:
-            break;
+    UIView *view;
+
+    if (indexPath.section == 0) {
+        switch (indexPath.row) {
+            case 0:
+                view = [BUKExamplePopView popViewWithExampleStyle:BUKExampleStyle_Default];
+                break;
+                
+            case 1:
+                view = [BUKExamplePopView popViewWithExampleStyle:BUKExampleStyle_DropMenu];
+                break;
+                
+            case 2:
+                view = [BUKExamplePopView popViewWithExampleStyle:BUKExampleStyle_PopUpMenu];
+                break;
+                
+            case 3:
+                view = [BUKExamplePopView popViewWithExampleStyle:BUKExampleStyle_RightMenu];
+                break;
+                
+            default:
+                break;
+        }
+    }else {
+        switch (indexPath.row) {
+            case 0:
+                view = [BUKExamplePopView popViewWithExampleStyle:BUKExampleStyle_TwoLevelSelection];
+                break;
+        }
     }
-}
+    [view buk_dynamicShowInView:self.view];
 
-#pragma mark - dynamic styles
-- (void)topCenterBottom
-{
-    BUKXOrYMoveAnimationStyle *style = [[BUKXOrYMoveAnimationStyle alloc] initWithView:self.testView];
-    style.startPosition = BUKTopOuterBorder;
-    style.showPosition = BUKYCenter;
-    style.endPosition = BUKBottomOuterBorder;
     
-    self.testView.frame = CGRectMake(CGRectGetMidX(self.view.bounds) - 100, 0, 200, 150);
-    [self.testView buk_dynamicShowInView:self.view];
-}
-
-- (void)topCenterRight
-{
-    BUKXOrYMoveAnimationStyle *style = [[BUKXOrYMoveAnimationStyle alloc] initWithView:self.testView];
-    style.startPosition = BUKTopOuterBorder;
-    style.showPosition = BUKYCenter;
-    style.endPosition = BUKRightOuterBorder;
-    
-    self.testView.buk_animationStyle = style;
-    
-    self.testView.frame = CGRectMake(CGRectGetMidX(self.view.bounds) - 100, 0, 200, 150);
-    [self.testView buk_dynamicShowInView:self.view];
-}
-
-#pragma mark - setter && getter
-- (UIView *)testView
-{
-    if (!_testView) {
-        _testView = [[UIView alloc] init];
-        _testView.backgroundColor = [UIColor greenColor];
-    }
-    return _testView;
 }
 @end

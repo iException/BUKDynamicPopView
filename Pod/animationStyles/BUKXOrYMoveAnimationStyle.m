@@ -49,59 +49,59 @@
     }
     
     CGRect viewFrame = self.view.frame;
-    CGRect superViewFrame = self.view.superview.bounds;
+    CGRect superViewBounds = self.view.superview.bounds;
     
     CGFloat x, y;
     
     switch (position) {
         case BUKLeftInnerBorder: {
-            x = CGRectGetMinX(superViewFrame) + CGRectGetWidth(viewFrame);
-            y = viewFrame.origin.y;
+            x = CGRectGetWidth(viewFrame)/2.0;
+            y = CGRectGetMidY(viewFrame);
             break;
         }
         case BUKRightInnerBorder: {
-            x = CGRectGetMaxX(superViewFrame) - CGRectGetWidth(viewFrame);
-            y = viewFrame.origin.y;
+            x = CGRectGetMaxX(superViewBounds) - CGRectGetWidth(viewFrame)/2.0;
+            y = CGRectGetMidY(viewFrame);
             break;
         }
         case BUKTopInnerBorder: {
-            x = viewFrame.origin.x;
-            y = CGRectGetMinY(superViewFrame) + CGRectGetHeight(viewFrame);
+            x = CGRectGetMidX(viewFrame);
+            y = CGRectGetHeight(viewFrame)/2.0;
             break;
         }
         case BUKBottomInnerBorder: {
-            x = viewFrame.origin.x;
-            y = CGRectGetMaxY(superViewFrame) - CGRectGetHeight(viewFrame);
+            x = CGRectGetMidX(viewFrame);
+            y = CGRectGetMaxY(superViewBounds) - CGRectGetHeight(viewFrame)/2.0;
             break;
         }
         case BUKLeftOuterBorder: {
-            x = CGRectGetMinX(superViewFrame) - CGRectGetWidth(viewFrame);
-            y = viewFrame.origin.y;
+            x = -CGRectGetWidth(viewFrame)/2.0;
+            y = CGRectGetMidY(viewFrame);
             break;
         }
         case BUKRightOuterBorder: {
-            x = CGRectGetMaxX(superViewFrame) + CGRectGetWidth(viewFrame);
-            y = viewFrame.origin.y;
+            x = CGRectGetMaxX(superViewBounds) + CGRectGetWidth(viewFrame)/2.0;
+            y = CGRectGetMidY(viewFrame);
             break;
         }
         case BUKTopOuterBorder: {
-            x = viewFrame.origin.x;
-            y = CGRectGetMinY(superViewFrame) - CGRectGetHeight(viewFrame);
+            x = CGRectGetMidX(viewFrame);
+            y = CGRectGetMinY(superViewBounds) - CGRectGetHeight(viewFrame)/2.0;
             break;
         }
         case BUKBottomOuterBorder: {
-            x = viewFrame.origin.x;
-            y = CGRectGetMaxY(superViewFrame) + CGRectGetHeight(viewFrame);
+            x = CGRectGetMidX(viewFrame);
+            y = CGRectGetMaxY(superViewBounds) + CGRectGetHeight(viewFrame)/2.0;
             break;
         }
         case BUKXCenter: {
-            x = CGRectGetMidX(superViewFrame) - CGRectGetWidth(viewFrame)/2.0;
-            y = viewFrame.origin.y;
+            x = CGRectGetMidX(superViewBounds);
+            y = CGRectGetMidY(viewFrame);
             break;
         }
         case BUKYCenter: {
-            x = viewFrame.origin.x;
-            y = CGRectGetMidY(superViewFrame) - CGRectGetHeight(viewFrame)/2.0;
+            x = CGRectGetMidX(viewFrame);
+            y = CGRectGetMidY(superViewBounds);
             break;
         }
         default: {
@@ -110,7 +110,7 @@
             break;
         }
     }
-    return CGPointMake(x + CGRectGetWidth(viewFrame)/2.0, y + CGRectGetHeight(viewFrame)/2.0);
+    return CGPointMake(x, y);
 }
 
 @end

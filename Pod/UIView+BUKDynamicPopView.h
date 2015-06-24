@@ -19,7 +19,7 @@
  *
  *  @see BUKGravityCollisionBehavior
  */
-@property (nonatomic, strong) id<BUKDynamicBehavior> buk_dynamicShowBehavior;
+@property (nonatomic, strong) id<BUKDynamicBehavior> buk_dynamicShowBehavior UI_APPEARANCE_SELECTOR;
 
 /**
  *  Behavior for dynamic hide animation. If behavior is nil, `BUKUIViewAnimationBehavior` will be
@@ -27,7 +27,7 @@
  *
  *  @see BUKUIViewAnimationBehavior
  */
-@property (nonatomic, strong) id<BUKDynamicBehavior> buk_dynamicHideBehavior;
+@property (nonatomic, strong) id<BUKDynamicBehavior> buk_dynamicHideBehavior UI_APPEARANCE_SELECTOR;
 
 
 
@@ -37,20 +37,20 @@
  *
  *  @see BUKXOrYMoveAnimationStyle
  */
-@property (nonatomic, strong) id<BUKDynamicAnimationStyle> buk_animationStyle;
+@property (nonatomic, strong) id<BUKDynamicAnimationStyle> buk_animationStyle UI_APPEARANCE_SELECTOR;
 
 
 
 /**
  *  Background inserted below self. If background is nil, a black translucent view will be used.
  */
-@property (nonatomic, strong) UIView *buk_dynamicBackground;
+@property (nonatomic, strong) UIView *buk_dynamicBackground UI_APPEARANCE_SELECTOR;
 
 /**
  *  You can tap background to dynamic hide self by default. If you don't want this feature, you
  *  can set this property to NO to disable it.
  */
-@property (nonatomic, assign) BOOL buk_disableBackgroundTapHide;
+@property (nonatomic, assign) BOOL buk_disableBackgroundTapHide UI_APPEARANCE_SELECTOR;
 
 
 

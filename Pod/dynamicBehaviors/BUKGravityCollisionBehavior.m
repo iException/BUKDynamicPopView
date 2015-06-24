@@ -30,7 +30,7 @@
     self.animator.delegate = self;
     self.completeBlock = complete;
     
-    view.superview.userInteractionEnabled = NO;
+//    view.superview.userInteractionEnabled = NO;
     
     CGPoint beginCenter = view.center;
     
@@ -73,7 +73,7 @@
 
 - (void)dynamicAnimatorDidPause:(UIDynamicAnimator *)animator
 {
-    self.animator.referenceView.userInteractionEnabled = YES;
+//    self.animator.referenceView.userInteractionEnabled = YES;
     
     if (self.completeBlock) {
         self.completeBlock();
