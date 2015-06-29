@@ -9,14 +9,13 @@
 
 Pod::Spec.new do |s|
   s.name             = "BUKDynamicPopView"
-  s.version          = "0.0.1"
+  s.version          = "1.0.0"
   s.summary          = "UIView's Category, simply making any view into a pop view."
   s.description      = <<-DESC
                        UIView's Category, simply making any view into a pop view. You also
                        can custom the animation behavior(style and path) very easily.
                        DESC
   s.homepage         = "https://github.com/iException/BUKDynamicPopView"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "hyice" => "hy_ice719@163.com" }
   s.source           = { :git => "https://github.com/iException/BUKDynamicPopView.git", :tag => s.version.to_s }
