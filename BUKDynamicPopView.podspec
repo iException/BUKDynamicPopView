@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "BUKDynamicPopView"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "UIView's Category, simply making any view into a pop view."
   s.description      = <<-DESC
                        UIView's Category, simply making any view into a pop view. You also
