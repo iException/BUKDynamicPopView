@@ -49,9 +49,17 @@
 /**
  *  You can tap background to dynamic hide self by default. If you don't want this feature, you
  *  can set this property to NO to disable it.
+ *
+ *  @warning This flag only disable the tap gesture, but the background is still showing. You can
+ *  directly set the buk_dynamicBackground to hidden if you want.
  */
 @property (nonatomic, assign) BOOL buk_disableBackgroundTapHide UI_APPEARANCE_SELECTOR;
 
+
+/**
+ *  Flag for you to known whether the pop view is animating for push or pop.
+ */
+@property (nonatomic, assign, readonly) BOOL buk_popViewIsAnimating;
 
 
 /**
