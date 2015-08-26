@@ -12,4 +12,8 @@
 
 - (void)buk_animateView:(UIView *)view toCenter:(CGPoint)endCenter complete:(void (^)())complete;
 
+@optional
+
+- (void)buk_cancelAnimationForView:(UIView *)view complete:(void (^)())complete;
+
 @end

@@ -55,29 +55,14 @@
 
 - (void)buk_dynamicHide
 {
-    if (self.buk_dynamicPopViewDelegate
-        && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewWillHide:)]) {
-        [self.buk_dynamicPopViewDelegate buk_dynamicPopViewWillHide:self];
+    if (self.buk_popViewIsAnimating &&
+        [self.buk_dynamicShowBehavior respondsToSelector:@selector(buk_cancelAnimationForView:complete:)]) {
+        [self.buk_dynamicShowBehavior buk_cancelAnimationForView:self complete:^{
+            [self buk_dynamicHideAnimation];
+        }];
+    } else {
+        [self buk_dynamicHideAnimation];
     }
-    self.buk_popViewIsAnimating = YES;
-    CGPoint centerAfterHide = [self.buk_animationStyle buk_viewCenterAfterHide];
-    [self.buk_dynamicHideBehavior buk_animateView:self toCenter:centerAfterHide complete:^{
-        [self removeFromSuperview];
-        if (self.buk_dynamicBackground) {
-            [UIView animateWithDuration:0.2f animations:^{
-                self.buk_dynamicBackground.alpha = 0;
-            } completion:^(BOOL finished) {
-                [self.buk_dynamicBackground removeFromSuperview];
-            }];
-
-        }
-        self.buk_popViewIsAnimating = NO;
-
-        if (self.buk_dynamicPopViewDelegate
-            && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewDidHide:)]) {
-            [self.buk_dynamicPopViewDelegate buk_dynamicPopViewDidHide:self];
-        }
-    }];
 }
 
 #pragma mark - private -
@@ -133,13 +118,36 @@
     }];
 }
 
+- (void)buk_dynamicHideAnimation
+{
+    if (self.buk_dynamicPopViewDelegate
+        && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewWillHide:)]) {
+        [self.buk_dynamicPopViewDelegate buk_dynamicPopViewWillHide:self];
+    }
+    self.buk_popViewIsAnimating = YES;
+    CGPoint centerAfterHide = [self.buk_animationStyle buk_viewCenterAfterHide];
+    [self.buk_dynamicHideBehavior buk_animateView:self toCenter:centerAfterHide complete:^{
+        [self removeFromSuperview];
+        if (self.buk_dynamicBackground) {
+            [UIView animateWithDuration:0.2f animations:^{
+                self.buk_dynamicBackground.alpha = 0;
+            } completion:^(BOOL finished) {
+                [self.buk_dynamicBackground removeFromSuperview];
+            }];
+            
+        }
+        self.buk_popViewIsAnimating = NO;
+        
+        if (self.buk_dynamicPopViewDelegate
+            && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewDidHide:)]) {
+            [self.buk_dynamicPopViewDelegate buk_dynamicPopViewDidHide:self];
+        }
+    }];
+}
+
 #pragma mark - event -
 - (void)buk_backgroundHideTap:(UIGestureRecognizer *)gesture
 {
-    if (self.buk_popViewIsAnimating) {
-        return;
-    }
-    
     if (self.buk_dynamicPopViewDelegate
         && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewBackgroundTapped:)]) {
         [self.buk_dynamicPopViewDelegate buk_dynamicPopViewBackgroundTapped:self];

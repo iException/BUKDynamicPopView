@@ -78,4 +78,12 @@
     self.animator = nil;
 }
 
+- (void)buk_cancelAnimationForView:(UIView *)view complete:(void (^)())complete
+{
+    [self.animator removeAllBehaviors];
+    self.animator = nil;
+    self.completeBlock = nil;
+    complete();
+}
+
 @end
