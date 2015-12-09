@@ -73,6 +73,7 @@
 {
     if (self.completeBlock) {
         self.completeBlock();
+        self.completeBlock = nil;
     }
     
     self.animator = nil;
