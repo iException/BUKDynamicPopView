@@ -14,6 +14,11 @@
 
 #import "BUKXOrYMoveAnimationStyle.h"
 
+NSString * BUKDynamicPopViewWillShowNotification = @"BUKDynamicPopViewWillShowNotification";
+NSString * BUKDynamicPopViewWillHideNotification = @"BUKDynamicPopViewWillHideNotification";
+NSString * BUKDynamicPopViewDidShowNotification = @"BUKDynamicPopViewDidShowNotification";
+NSString * BUKDynamicPopViewDidHideNotification = @"BUKDynamicPopViewDidHideNotification";
+
 @interface UIView ()
 @property (nonatomic, assign) BOOL buk_popViewIsAnimating;
 @end
@@ -97,10 +102,13 @@
 
 - (void)buk_dynamicShowAnimation
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BUKDynamicPopViewWillShowNotification object:nil];
+    
     if (self.buk_dynamicPopViewDelegate
         && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewWillShow:)]) {
         [self.buk_dynamicPopViewDelegate buk_dynamicPopViewWillShow:self];
     }
+    
     self.buk_popViewIsAnimating = YES;
     [self buk_insertBackground];
     
@@ -108,6 +116,9 @@
     CGPoint centerWhenShowing = [self.buk_animationStyle buk_viewCenterWhenShowing];
     
     self.center = centerBeforeShow;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:BUKDynamicPopViewDidShowNotification object:nil];
+    
     [self.buk_dynamicShowBehavior buk_animateView:self toCenter:centerWhenShowing complete:^{
         self.buk_popViewIsAnimating = NO;
 
@@ -120,10 +131,13 @@
 
 - (void)buk_dynamicHideAnimation
 {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BUKDynamicPopViewWillHideNotification object:nil];
+    
     if (self.buk_dynamicPopViewDelegate
         && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewWillHide:)]) {
         [self.buk_dynamicPopViewDelegate buk_dynamicPopViewWillHide:self];
     }
+    
     self.buk_popViewIsAnimating = YES;
     CGPoint centerAfterHide = [self.buk_animationStyle buk_viewCenterAfterHide];
     [self.buk_dynamicHideBehavior buk_animateView:self toCenter:centerAfterHide complete:^{
@@ -137,6 +151,8 @@
             
         }
         self.buk_popViewIsAnimating = NO;
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:BUKDynamicPopViewDidHideNotification object:nil];
         
         if (self.buk_dynamicPopViewDelegate
             && [self.buk_dynamicPopViewDelegate respondsToSelector:@selector(buk_dynamicPopViewDidHide:)]) {

@@ -11,6 +11,14 @@
 #import "BUKDynamicAnimationStyle.h"
 #import "BUKDynamicPopViewDelegate.h"
 
+/**
+ *  Notification support for view transition.
+ */
+extern NSString * BUKDynamicPopViewWillShowNotification;
+extern NSString * BUKDynamicPopViewWillHideNotification;
+extern NSString * BUKDynamicPopViewDidShowNotification;
+extern NSString * BUKDynamicPopViewDidHideNotification;
+
 @interface UIView (BUKDynamicPopView)
 
 /**
