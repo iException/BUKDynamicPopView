@@ -73,7 +73,7 @@ extern NSString * BUKDynamicPopViewDidHideNotification;
 /**
  *  Dynamic show hide event delegate.
  */
-@property (nonatomic, assign) id<BUKDynamicPopViewDelegate> buk_dynamicPopViewDelegate;
+@property (nonatomic, weak) id<BUKDynamicPopViewDelegate> buk_dynamicPopViewDelegate;
 
 
 

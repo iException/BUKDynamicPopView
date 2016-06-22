@@ -252,15 +252,15 @@ static void *BUKDisableBackgroundTapHide = &BUKDisableBackgroundTapHide;
     objc_setAssociatedObject(self, BUKDisableBackgroundTapHide, @(buk_disableBackgroundTapHide), OBJC_ASSOCIATION_ASSIGN);
 }
 
-static void *BUKDynamicPopViewDelegate = &BUKDynamicPopViewDelegate;
+static NSString * const BUKDynamicPopViewDelegateKey = @"BUKDynamicPopViewDelegateKey";
 - (id<BUKDynamicPopViewDelegate>)buk_dynamicPopViewDelegate
 {
-    return objc_getAssociatedObject(self, BUKDynamicPopViewDelegate);
+    return [[self storedMapTable] objectForKey:BUKDynamicPopViewDelegateKey];
 }
 
 - (void)setBuk_dynamicPopViewDelegate:(id<BUKDynamicPopViewDelegate>)buk_dynamicPopViewDelegate
 {
-    objc_setAssociatedObject(self, BUKDynamicPopViewDelegate, buk_dynamicPopViewDelegate, OBJC_ASSOCIATION_ASSIGN);
+    [[self storedMapTable] setObject:buk_dynamicPopViewDelegate forKey:BUKDynamicPopViewDelegateKey];
 }
 
 static void *BUKPopViewIsAnimating = &BUKPopViewIsAnimating;
@@ -273,4 +273,18 @@ static void *BUKPopViewIsAnimating = &BUKPopViewIsAnimating;
 {
     objc_setAssociatedObject(self, BUKPopViewIsAnimating, @(buk_popViewIsAnimating), OBJC_ASSOCIATION_ASSIGN);
 }
+
+static void *BUKPopViewStoredMapTable = &BUKPopViewStoredMapTable;
+- (NSMapTable *)storedMapTable
+{
+    NSMapTable *storedMap = objc_getAssociatedObject(self, BUKPopViewStoredMapTable);
+
+    if (!storedMap) {
+        storedMap = [NSMapTable weakToWeakObjectsMapTable];
+        objc_setAssociatedObject(self, BUKPopViewStoredMapTable, storedMap, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    }
+
+    return storedMap;
+}
+
 @end
